@@ -7,7 +7,11 @@ $font-md: 30px;
 $font-sm: 20px;
 
 .nav {
-  background-color: $color-primary;
+  //   background-color: lighten($color-primary, 25%);
+  //   background-color: darken($color-primary, 25%);
+  //   background-color: transparentize($color-primary, .6);
+//   background-color: mix(blue, green);
+  background-color: mix(blue, green, 35%);
   ul li {
     list-style: none;
   }
@@ -19,6 +23,10 @@ $font-sm: 20px;
       color: $color-tertiary;
     }
   }
+}
+
+@function fontSizex2($size: 25px) {
+  @return $size * 2;
 }
 
 .heading {
@@ -35,7 +43,15 @@ h1 {
     background-color: $color-tertiary;
   }
 }
+
+.banner p {
+  font-size: fontSizex2($font-sm);
+}
+
 .footer h3 {
   @extend .heading;
   @extend h1;
+}
+.footer p {
+  font-size: fontSizex2();
 }
