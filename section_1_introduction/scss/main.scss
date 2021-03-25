@@ -15,19 +15,30 @@ $font-sm: 20px;
     text-decoration: none;
     font-size: $font-sm;
     color: $color-secondary;
-    &:hover{
-        color: $color-tertiary;
+    &:hover {
+      color: $color-tertiary;
     }
   }
 }
 
-.banner h1 {
-  font-size: $font-lg;
+@mixin headingStyles($fontSize: 32px) {
+  font-size: $fontSize;
   color: $color-secondary;
   text-align: center;
 }
+
+@mixin transitionMixin($param...) {
+  transition: $param;
+}
+
+.banner h1 {
+  @include headingStyles($font-lg);
+}
 .footer h3 {
-  font-size: $font-md;
-  color: $color-secondary;
-  text-align: center;
+  @include headingStyles();
+  @include transitionMixin(color 0.5s, background-color 1s);
+  &:hover {
+    color: $color-tertiary;
+    background-color: $color-primary;
+  }
 }
