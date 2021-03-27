@@ -1,0 +1,8 @@
+// List
+$colors: red blue green orange;
+
+@each $color in $colors {
+  .par-#{$color} {
+    background-color: $color;
+  }
+}
