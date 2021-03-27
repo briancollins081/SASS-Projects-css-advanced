@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+/***************************************
+By default html font size is set to 16px
+But for this project:
+ - We need 1rem = 10px hence:
+   1. 10/16 = 0.625
+   2. 0.625 * 100 = 62.5%
+   3. Use 62.5% of the default html font size to get a 10px font size
+*****************************************/
+html {
+  font-size: 62.5%;
+}
