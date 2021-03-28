@@ -12,9 +12,15 @@
     color: color(primary);
     text-decoration: none;
     font-size: size(sm);
-    transition: all .3s;
+    transition: all 0.3s;
     &:hover {
       color: lighten($color: color(primary), $amount: 40%);
     }
   }
+}
+
+@mixin flexPosition($justCont: center, $alignIte: center) {
+  display: flex;
+  justify-content: $justCont;
+  align-items: $alignIte;
 }
