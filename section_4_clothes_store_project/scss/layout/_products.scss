@@ -18,6 +18,7 @@
 .product {
   position: relative;
   transition: all 0.1s 0.6s;
+  cursor: pointer;
   &:hover .product-description {
     opacity: 1;
     visibility: visible;
@@ -64,4 +65,8 @@
       background-color: lighten($color: color(primary), $amount: 20%);
     }
   }
+}
+
+.products-btn {
+  @include flexPosition;
 }
